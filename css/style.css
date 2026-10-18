@@ -385,3 +385,16 @@ p { margin: 0; }
 /* 보강한 작업장만 바뀐다. 다른 작업장의 상태를 임의로 바꾸지 않는다. */
 .braced .repair{display:none}
 .braced[data-work="tunnel"] .repair-tunnel,.braced[data-work="embankment"] .repair-embankment,.braced[data-work="mason"] .repair-mason{display:block}
+
+/* 수업 시연의 길 찾기와 개인 체험 기록 */
+.wayfinding{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:14px}
+.wayfinding>span{font-size:13px;font-weight:bold;color:#355c57}
+.wayfinding .btn{font-size:13px;padding:8px 12px;min-height:44px}
+.wayfinding .btn:disabled{opacity:.5;cursor:default}
+.note-entry{padding:12px 0;border-bottom:1px solid #d0c1a2}.note-entry p{margin-top:5px;line-height:1.7}
+.reflection-panel{margin:24px 0;padding:20px;background:#ede6d3;border:1px solid #bca984}
+.reflection-panel label{display:block;margin:12px 0 8px}
+.reflection-panel textarea{display:block;width:100%;box-sizing:border-box;resize:vertical;min-height:120px;padding:12px;font:inherit;color:#342d21;background:#fffaf0;border:1px solid #8f7b57;border-radius:4px}
+.reflection-panel textarea:focus-visible{outline:3px solid #355c57;outline-offset:2px}
+.reflection-panel .btn{margin-top:12px;white-space:normal}.download-status{font-size:13px;margin-top:10px}
+@media(max-width:600px){.wayfinding .btn{flex:1 1 42%;white-space:normal}.wayfinding>span{flex-basis:100%}.reflection-panel{padding:14px}}
