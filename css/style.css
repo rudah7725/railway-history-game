@@ -398,3 +398,20 @@ p { margin: 0; }
 .reflection-panel textarea:focus-visible{outline:3px solid #355c57;outline-offset:2px}
 .reflection-panel .btn{margin-top:12px;white-space:normal}.download-status{font-size:13px;margin-top:10px}
 @media(max-width:600px){.wayfinding .btn{flex:1 1 42%;white-space:normal}.wayfinding>span{flex-basis:100%}.reflection-panel{padding:14px}}
+
+/* 기관사: 같은 기관차와 현장을 유지하며 시간·운행 상태를 표현한다. */
+.page:has([data-screen="driver"]){max-width:1400px}
+.driver-player{transition:transform .65s ease-in-out}.driver-fog,.driver-wave,.driver-report{display:none}
+.driver-stage.scene-1 .driver-fog,.driver-stage.scene-1 .driver-wave,.driver-stage.report .driver-report{display:block}
+.driver-stage.scene-1 .driver-station,.driver-stage.scene-1 .driver-chief,.driver-stage.scene-1 .driver-bench{opacity:.12}
+.driver-stage.scene-1 .driver-landscape{animation:driver-land 4s ease-in-out infinite alternate}
+.driver-stage.scene-1 .driver-rod{animation:driver-rod .35s ease-in-out infinite alternate}
+.driver-stage.scene-1.slow .driver-landscape{animation-duration:9s}.driver-stage.scene-1.slow .driver-rod{animation-duration:.9s}
+.driver-stage.scene-1.stop .driver-landscape,.driver-stage.scene-1.stop .driver-rod{animation:none}
+.driver-stage.scene-2 .driver-sky{fill:#cdb18d}.driver-stage.scene-2 .driver-fireman{transform:translate(390px,400px)}
+.driver-stage.in-action.scene-0 .driver-loco{animation:driver-depart 1.5s ease-in-out}
+.driver-stage.in-action.scene-0 .driver-steam{animation:driver-steam .6s ease-in-out infinite alternate}
+.driver-stage.rest .driver-player{opacity:.8}.driver-stage.keep .driver-player{filter:drop-shadow(2px 2px 1px #805139)}
+.driver-stage .pin:before{content:'◦ '}.driver-shell [data-driver-skip][hidden]{display:none}
+@keyframes driver-land{to{transform:translateX(-40px)}}@keyframes driver-rod{to{transform:translateY(-6px)}}
+@keyframes driver-depart{50%{transform:translateX(24px)}}@keyframes driver-steam{to{opacity:.35;transform:translateY(-8px)}}

@@ -124,7 +124,7 @@
 
     show('roles', el('section', { class: 'screen roles' }, [
       el('h2', { text: '누구의 자리에 서 볼까요?' }),
-      el('p', { class: 'lead', text: '같은 철도를 일곱 사람의 자리에서 바라봅니다. 이번 초안에서는 철도 건설 노동자만 플레이할 수 있습니다.' }),
+      el('p', { class: 'lead', text: '같은 철도를 일곱 사람의 자리에서 바라봅니다. 이번 초안에서는 철도 건설 노동자와 기관차 기관사를 플레이할 수 있습니다.' }),
       el('ul', { class: 'role-grid' }, cards),
       el('div', { class: 'actions' }, [
         el('button', { class: 'btn btn-ghost', 'data-action': 'home', onclick: showStart, text: '처음 화면으로' })
@@ -141,6 +141,7 @@
     state.history = [];
     state.chosen = null;
     if (roleId === 'worker') { window.WorkerGame.start(app, DATA.scenarios.worker, showRoles); return; }
+    if (roleId === 'driver') { window.DriverGame.start(app, DATA.scenarios.driver, showRoles); return; }
     showScene();
   }
 

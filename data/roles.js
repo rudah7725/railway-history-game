@@ -32,7 +32,7 @@ window.RAILWAY_DATA = {
       name: '기관차 기관사',
       situation: '새 기술인 증기기관차를 모는 숙련 노동자. 승객과 화물을 책임진다.',
       concern: '긴 근무와 피로, 사고의 책임. 숙련에 걸맞은 대우를 받고 있을까?',
-      playable: false,
+      playable: true,
       sources: []
     },
     {
